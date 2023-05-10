@@ -4,6 +4,7 @@ import { ItemDetails } from './components/rightContainer/item-details';
 import {
   AppContainer,
   CardWrapper,
+  Title,
   ItemDetailsWrapper,
   MainContainer,
   LoadMoreWrapper,
@@ -21,12 +22,13 @@ export function App() {
       return fetch(`${ITEM_URL}${pokemon.name}`).then((res) => res.json());
     });
     return Promise.all(promises).then((data) => {
-      setAllPokemon((currentList) => [...currentList, ...data]);
+      setAllPokemon(data);
       return data;
     });
   };
 
   const getAllPokemon = () => {
+    setAllPokemon([]);
     return fetch(loadMore)
       .then((res) => res.json())
       .then((data) => {
@@ -43,7 +45,7 @@ export function App() {
     <AppContainer>
       <GlobalStyle />
       <CardWrapper>
-        <h1>{COMPONENT_NAME.defaultName}</h1>
+        <Title>{COMPONENT_NAME.defaultName}</Title>
         <MainContainer>
           <CardComponent data={allPokemon} handleInfo={(item) => setItemDetails(item)} />
         </MainContainer>

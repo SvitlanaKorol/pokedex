@@ -9,10 +9,9 @@ export const ContentCard = styled.div`
   margin: 0.3rem;
   border: 1px solid rgba(0, 0, 0, 0.185);
   border-radius: 0.2rem;
-  min-width: 160px;
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
-  width: 300px;
+  width: 200px;
   @media (min-width: 320px) and (max-width: 480px) {
     width: 150px;
   }
@@ -28,8 +27,8 @@ export const ContentCard = styled.div`
   }
 
   img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   small {
@@ -39,6 +38,7 @@ export const ContentCard = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   width: 33%;
   flex-grow: 1;
   . * {

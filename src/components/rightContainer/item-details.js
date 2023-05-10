@@ -45,14 +45,16 @@ export const ItemDetails = ({ data }) => {
     <Wrapper>
       {data ? (
         <ContentCard>
-          <img src={`${IMG_URL}${data.id}.svg`} alt="data.name" />
-          <h3>{data.name}</h3>
+          <div>
+            <img src={`${IMG_URL}${data.id}.svg`} alt="data.name" />
+            <h3>{data.name}</h3>
+          </div>
           <DetailWrapper>
             <Table>
               <tbody>
                 {dataDescription.map((row) => (
                   // eslint-disable-next-line react/jsx-key
-                  <tr>
+                  <tr key={row.column1}>
                     <Td>{row.column1}</Td>
                     <Td>{row.column2}</Td>
                   </tr>

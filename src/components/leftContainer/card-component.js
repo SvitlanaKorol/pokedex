@@ -9,7 +9,7 @@ export const CardComponent = ({ data, handleInfo }) => {
         <ContentCard key={items.id} onClick={() => handleInfo(items)}>
           <img src={items.sprites.other.dream_world.front_default} alt={items.name} />
           <DetailWrapper>
-            <h3>{items.name}</h3>
+            <div>{items.name}</div>
             <div className={items.types[0].type.name}>{items.types[0].type.name}</div>
           </DetailWrapper>
         </ContentCard>

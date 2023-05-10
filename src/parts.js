@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import { ContentCard } from './components/leftContainer/parts';
 
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  padding: 3rem 0.5rem;
-  margin: auto 7rem;
+  height: 100vh;
+  margin: auto;
 
   @media (min-width: 768px) {
     align-items: center;
@@ -13,19 +13,31 @@ export const AppContainer = styled.div`
 `;
 export const CardWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  width: 67%;
   align-items: center;
   justify-content: center;
-  width: 67%;
+
+  ${ContentCard} {
+    width: calc((100% - 2rem) / 4);
+  }
+`;
+
+export const Title = styled.div`
+  padding: 1rem 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  font-size: 24px;
+  font-weight: bold;
 `;
 export const ItemDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
-  top: 30%;
+  top: 25%;
   right: 10px;
-  width: 33%;
+  width: 50%;
 `;
 
 export const MainContainer = styled.div`
