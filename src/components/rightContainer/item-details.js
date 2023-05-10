@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { IMG_URL, COMPONENT_NAME, CARD_DESCRIPTION } from '../../constants';
-import { DetailWrapper, ContentCard, Wrapper, Table, Td, EmptyContent } from './parts';
+import {
+  DetailWrapper,
+  ContentCard,
+  DescriptionWrapper,
+  Wrapper,
+  Table,
+  Td,
+  EmptyContent,
+} from './parts';
 
 export const ItemDetails = ({ data }) => {
   const [details, setDetails] = useState({
@@ -47,7 +55,12 @@ export const ItemDetails = ({ data }) => {
         <ContentCard>
           <div>
             <img src={`${IMG_URL}${data.id}.svg`} alt="data.name" />
-            <h3>{data.name}</h3>
+            <DescriptionWrapper>
+              <h4>
+                {data.name}
+                <span>&nbsp;&#35;{data.id}</span>
+              </h4>
+            </DescriptionWrapper>
           </div>
           <DetailWrapper>
             <Table>

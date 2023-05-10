@@ -15,25 +15,19 @@ export const ContentCard = styled.div`
   @media (min-width: 320px) and (max-width: 480px) {
     width: 150px;
   }
-
-  .h4 {
-    margin-bottom: 0.2rem;
-  }
-
-  .number {
-    border-radius: 1rem;
-    padding: 0.2rem 0.4rem;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-
   img {
     width: 100px;
     height: 100px;
   }
+`;
 
-  small {
-    text-transform: capitalize;
-  }
+export const DescriptionWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
 `;
 
 export const Wrapper = styled.div`

@@ -4,6 +4,8 @@ import { ContentCard } from './components/leftContainer/parts';
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: auto;
 
@@ -34,7 +36,6 @@ export const ItemDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   top: 25%;
   right: 10px;
   width: 50%;
